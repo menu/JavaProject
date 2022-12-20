@@ -1,0 +1,8 @@
+#idea folder
+.idea
+
+#out folder
+out
+
+#other files
+JavaProject.iml
