@@ -1,6 +1,6 @@
 package lesson_03.homework;
 
-public class homework_task {
+public class HomeworkTask {
     public static void main(String[] args) {
         // First task
         int i1 = 5;
