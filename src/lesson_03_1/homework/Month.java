@@ -63,6 +63,7 @@ public class Month {
                 System.out.println("Wrong month number!");
             }
         }
+        input.close();
 
     }
 }
