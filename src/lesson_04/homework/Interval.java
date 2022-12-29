@@ -22,5 +22,7 @@ public class Interval {
         else {
             System.out.println("Number " + number + " is out known intervals");
         }
+
+        input.close();
     }
 }
