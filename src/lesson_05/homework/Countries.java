@@ -22,7 +22,7 @@ public class Countries {
                 System.out.print("You already entered this city, try another: ");
                 getCity = input.next();
             }
-            System.out.print("Enter country (" + counter + " city left): ");
+            System.out.print("Enter country (" + counter + " country left): ");
             getCountry = input.next();
             countries.put(getCity, getCountry);
             counter -= 1;
