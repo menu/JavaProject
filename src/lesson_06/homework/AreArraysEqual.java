@@ -21,33 +21,32 @@ public class AreArraysEqual {
             System.out.print("Enter " + (i + 1) + " element of array: ");
             secondArray[i] = scanner.nextInt();
         }
+
         System.out.println("Comparing...");
         TimeUnit.SECONDS.sleep(1);
 
         System.out.print("First method: ");
-        arraysEqualsFirstMethod(firstArray, secondArray);
+        System.out.println("Arrays are equal: " + arraysEqualsFirstMethod(firstArray, secondArray));
         System.out.print("Second method: ");
-        System.out.println("Is arrays equal: " + arraysEqualsSecondMethod(firstArray, secondArray));
+        arraysEqualsSecondMethod(firstArray,secondArray);
 
         scanner.close();
 
     }
 
-    public static void arraysEqualsFirstMethod(int[] firstArray, int[] secondArray) {
-        boolean equals = true;
+    public static boolean arraysEqualsFirstMethod(int[] firstArray, int[] secondArray) {
         if (firstArray.length == secondArray.length) {
             for (int i = 0; i < firstArray.length; i++) {
                 if (firstArray[i] != secondArray[i]) {
-                    equals = false;
-                    break;
+                    return false;
                 }
             }
-        } else equals = false;
+        } else return false;
+        return true;
 
-        System.out.println("Is array equals: " + equals);
     }
 
-    public static boolean arraysEqualsSecondMethod(int[] firstArray, int[] secondArray) {
-        return Arrays.equals(firstArray, secondArray);
+    public static void arraysEqualsSecondMethod(int[] firstArray, int[] secondArray) {
+        System.out.println("Arrays are equal: " + Arrays.equals(firstArray, secondArray));
     }
 }
