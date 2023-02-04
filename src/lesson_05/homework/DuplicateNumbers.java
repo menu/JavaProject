@@ -1,9 +1,6 @@
 package lesson_05.homework;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class DuplicateNumbers {
     public static void main(String[] args) {
@@ -20,11 +17,17 @@ public class DuplicateNumbers {
             numbers.add(random.nextInt(50));
         }
 
-        for (int number : numbers){
-            uniqueNumbers.put(number,number);
+        System.out.println("Duplicate numbers:");
+        for (int number : numbers) {
+            uniqueNumbers.put(number, Collections.frequency(numbers, number));
+            if (Collections.frequency(numbers, number) > 1) {
+                System.out.println("Number " + number + " duplicates " + Collections.frequency(numbers, number) + " times");
+            }
         }
 
         System.out.println("ArrayList contains " + numbers.size() + " numbers: " + uniqueNumbers.size() + " is unique, " + (numbers.size() - uniqueNumbers.size()) + " is repeating");
+        System.out.println("numbers = " + numbers);
+        System.out.println("uniqueNumbers = " + uniqueNumbers);
 
         input.close();
     }
